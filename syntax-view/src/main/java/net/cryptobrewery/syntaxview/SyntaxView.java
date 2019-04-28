@@ -147,12 +147,8 @@ public class SyntaxView extends RelativeLayout {
         });
 
     }
-
-
-
-    //the user will be able to change color of the view as he wishes
-    public void setBgColor(String color) throws Error {
-
+    //check string's type is color
+    public void checkColor(String color){
         color = color.trim();
 
         if (!color.contains("#")) {
@@ -160,143 +156,55 @@ public class SyntaxView extends RelativeLayout {
         }
         if (TextUtils.isEmpty(color)) {
             throw new Error("SyntaxView Error : Empty Color String");
-
         }
         if (color.length() != 7) {
             throw new Error("SyntaxView Error : Unknown Color");
-
         }
+    }
+
+    //the user will be able to change color of the view as he wishes
+    public void setBgColor(String color) throws Error {
+        checkColor(color);
         code.setBackgroundColor(Color.parseColor(color));
     }
 
     public void setKeywordsColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-
-        }
+        checkColor(color);
         keywords.setColor(color);
     }
 
     public void setNumbersColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-
-        }
+        checkColor(color);
         numbers.setColor(color);
     }
 
     public void setSpecialCharsColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-        }
+        checkColor(color);
         special.setColor(color);
     }
 
     public void setCodeTextColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-        }
+        checkColor(color);
         code.setTextColor(Color.parseColor(color));
     }
 
     public void setAnnotationsColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-        }
+        checkColor(color);
         annotations.setColor(color);
-
     }
 
     public void setPrintStatmentsColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-        }
+        checkColor(color);
         printStatments.setColor(color);
     }
 
     public void setRowNumbersColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-        }
+        checkColor(color);
         rows.setTextColor(Color.parseColor(color));
     }
 
     public void setRowNumbersBgColor(String color) throws Error {
-        color = color.trim();
-
-        if (!color.contains("#")) {
-            throw new Error("SyntaxView Error : Invalid Color");
-        }
-        if (TextUtils.isEmpty(color)) {
-            throw new Error("SyntaxView Error : Empty Color String");
-
-        }
-        if (color.length() != 7) {
-            throw new Error("SyntaxView Error : Unknown Color");
-        }
+        checkColor(color);
         rows.setBackgroundColor(Color.parseColor(color));
     }
 
